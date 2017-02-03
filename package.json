@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
     "node-dht-sensor": "0.0.32"
   }
 }
