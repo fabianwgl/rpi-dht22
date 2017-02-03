@@ -5,5 +5,5 @@ dotenv.config({silent: true, path: path.join(__dirname, '..', '.env')});
 
 module.exports = {
   env: process.env.NODE_ENV || 'development',
-  port: process.env.PORT || 80
+  port: process.env.PORT || 3000
 };
