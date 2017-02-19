@@ -9,6 +9,8 @@ const app = express();
 app.use(bodyParser.json());
 
 require('./routes')(app);
+require('requests/start.js');
+require('requests/maker.js');
 
 
 app.listen(config.port, () => {
