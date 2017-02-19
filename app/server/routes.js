@@ -8,6 +8,6 @@ module.exports = function(app) {
   let router = new express.Router();
   router.get('/', (req, res) => res.send('raspi'));
   app.use('/', router);
-  app.use('/api/dht22', dht);
+  app.use('/dht', dht);
 
 };

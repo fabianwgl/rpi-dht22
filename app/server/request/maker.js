@@ -8,8 +8,8 @@ var requestLoop = setInterval(() => {
     if (!err) {
             
       var payload = {
-      	value1: temperature,
-      	value2: humidity
+      	value1: temperature.toFixed(1),
+      	value2: humidity.toFixed(1)
       };
       request({
       	url: process.env.MAKER_URL,
