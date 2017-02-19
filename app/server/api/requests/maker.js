@@ -3,7 +3,8 @@
 const request = require('request');
 const sensor = require('node-dht-sensor');
 
-sensor.read(22, 23, (err, temperature, humidity) => {
+var requestLoop = setInterval(() => {
+  sensor.read(22, 23, (err, temperature, humidity) => {
     if (!err) {
             
       var payload = {
@@ -21,4 +22,5 @@ sensor.read(22, 23, (err, temperature, humidity) => {
     }else{
     	console.log(err);
     }
-});
+  });
+},process.env.INTERVAL);
